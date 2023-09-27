@@ -3,15 +3,15 @@ package employee.version3;
 public class EmployeeProject {
 
     public static void main(String[] args) { 
-        HourlyEmployee h1 = new HourlyEmployee(12, "James", new MyDate(17,4,2020), new MyDate(27,7,1990), (float) 38.2, 100);
+        HourlyEmployee h1 = new HourlyEmployee(12, "James", 'D', "Ng", new MyDate(17,4,2020), new MyDate(27,7,1990), (float) 38.2, 100);
         
         HourlyEmployee h2 = new HourlyEmployee();
         
-        PieceWorkerEmployee pw1 = new PieceWorkerEmployee(34, "Mitnick", new MyDate(12,2,2017), new MyDate(19,9,1988), 350, 10);
+        PieceWorkerEmployee pw1 = new PieceWorkerEmployee(34, "Mitnick", 'C', "Pernites", new MyDate(12,2,2017), new MyDate(19,9,1988), 350, 10);
         
-        CommissionEmployee ce1 = new CommissionEmployee(71, "John", new MyDate(11,12,2021), new MyDate(17,4,1989), 75000);
+        CommissionEmployee ce1 = new CommissionEmployee(71, "John", 'A', "Gosling", new MyDate(11,12,2021), new MyDate(17,4,1989), 75000);
         
-        BasePlusCommissionEmployee bpce1 = new BasePlusCommissionEmployee(101, "Ann", new MyDate(1,2,2019), new MyDate(6,12,1991), 100000, 5000);
+        BasePlusCommissionEmployee bpce1 = new BasePlusCommissionEmployee(101, "Ann", 'V', "Lee", new MyDate(1,2,2019), new MyDate(6,12,1991), 100000, 5000);
         
         h1.displayInfo();
         
@@ -23,5 +23,4 @@ public class EmployeeProject {
         
         bpce1.displayInfo();
     }
-    
 }

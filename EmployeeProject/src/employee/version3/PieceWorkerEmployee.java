@@ -6,22 +6,21 @@ public class PieceWorkerEmployee extends Employee{
     
     // Constructors
     public PieceWorkerEmployee() {
-        empID = 0;
-        empName = "XXXXX";
+        super.empID = 0;
         totalPiecesFinished = 0;
         ratePerPiece = 0;
     }
     
-    public PieceWorkerEmployee(int empID, String empName) {
+    public PieceWorkerEmployee(int empID, String firstName, char middleIn, String lastName) {
+        super(firstName, middleIn, lastName);
         super.empID = empID;
-        super.empName = empName;
         totalPiecesFinished = 0;
         ratePerPiece = 0;
     }
 
-    public PieceWorkerEmployee(int empID, String empName, MyDate empDateHired, MyDate empBirthDate, int totalPiecesFinished, float ratePerPiece) {
+    public PieceWorkerEmployee(int empID, String firstName, char middleIn, String lastName, MyDate empDateHired, MyDate empBirthDate, int totalPiecesFinished, float ratePerPiece) {
+        super(firstName, middleIn, lastName);
         super.empID = empID;
-        super.empName = empName;
         super.empDateHired = empDateHired;
         super.empBirthDate = empBirthDate;
         this.totalPiecesFinished = totalPiecesFinished;
@@ -42,7 +41,7 @@ public class PieceWorkerEmployee extends Employee{
     public void displayInfo() {
         System.out.println("--- Piece Worker Employee ---");
         System.out.println("ID: " + empID);
-        System.out.println("Name: " + empName);
+        System.out.println("Name: " + firstName + " " + middleIn + ". " + lastName);
         System.out.println("Date Hired: " + empDateHired);
         System.out.println("Date of Birth: " + empBirthDate);
         System.out.println("Total Pieces Finished: " + totalPiecesFinished);
@@ -69,7 +68,6 @@ public class PieceWorkerEmployee extends Employee{
 
     @Override
     public String toString() {
-        return "PieceWorkerEmployee{" + "empID=" + empID + ", empName=" + empName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalPiecesFinished=" + totalPiecesFinished + ", ratePerPiece=" + ratePerPiece + '}';
+        return "PieceWorkerEmployee{" + "empID=" + empID + ", Name=" + firstName + " " + middleIn + ". " + lastName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalPiecesFinished=" + totalPiecesFinished + ", ratePerPiece=" + ratePerPiece + '}';
     }
-    
 }

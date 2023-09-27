@@ -62,5 +62,4 @@ public class CommissionEmployee extends Employee{
     public String toString() {
         return "CommissionEmployee{" + "empID=" + empID + ", empName=" + empName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalSales=" + totalSales + '}';
     }
-    
 }

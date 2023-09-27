@@ -71,5 +71,4 @@ public class PieceWorkerEmployee extends Employee{
     public String toString() {
         return "PieceWorkerEmployee{" + "empID=" + empID + ", empName=" + empName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalPiecesFinished=" + totalPiecesFinished + ", ratePerPiece=" + ratePerPiece + '}';
     }
-    
 }

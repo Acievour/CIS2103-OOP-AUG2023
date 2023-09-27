@@ -24,5 +24,4 @@ public class EmployeeProject {
         
         bpce1.displayInfo();
     }
-    
 }

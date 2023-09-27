@@ -5,6 +5,10 @@ public class Employee extends Name{
     protected MyDate empDateHired;
     protected MyDate empBirthDate;
     
+    public Employee(String firstName, char middleIn, String lastName) {
+        super(firstName, middleIn, lastName);
+    }
+    
     public Employee() {
         empID = 0;
         empDateHired = new MyDate(0,0,0);
@@ -35,6 +39,4 @@ public class Employee extends Name{
     public String toString() {
         return "Employee{" + "empID=" + empID + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + '}';
     }
-
-    
 }

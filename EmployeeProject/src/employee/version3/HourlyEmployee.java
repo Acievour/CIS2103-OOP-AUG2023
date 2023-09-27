@@ -11,16 +11,16 @@ public class HourlyEmployee extends Employee{
         ratePerHour = 0;
     }
     
-    public HourlyEmployee(int empID, Name empName) {
+    public HourlyEmployee(int empID, String firstName, char middleIn, String lastName) {
+        super(firstName, middleIn, lastName);
         super.empID = empID;
-        super.empName = empName;
         totalHoursWorked = 0;
         ratePerHour = 0;
     }
 
-    public HourlyEmployee(int empID, String empName, MyDate empDateHired, MyDate empBirthDate, float totalHoursWorked, float ratePerHour) {
+    public HourlyEmployee(int empID, String firstName, char middleIn, String lastName, MyDate empDateHired, MyDate empBirthDate, float totalHoursWorked, float ratePerHour) {
+        super(firstName, middleIn, lastName);
         super.empID = empID;
-        super.empName = empName;
         super.empDateHired = empDateHired;
         super.empBirthDate = empBirthDate;
         this.totalHoursWorked = totalHoursWorked;
@@ -41,7 +41,7 @@ public class HourlyEmployee extends Employee{
     public void displayInfo() {
         System.out.println("--- Hourly Employee ---");
         System.out.println("ID: " + empID);
-        System.out.println("Name: " + empName);
+        System.out.println("Name: " + firstName + " " + middleIn + ". " + lastName);
         System.out.println("Date Hired: " + empDateHired);
         System.out.println("Date of Birth: " + empBirthDate);
         System.out.println("Total Hours Worked: " + totalHoursWorked);
@@ -68,6 +68,6 @@ public class HourlyEmployee extends Employee{
 
     @Override
     public String toString() {
-        return "HourlyEmployee{" + "empID=" + empID + ", empName=" + empName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalHoursWorked=" + totalHoursWorked + ", ratePerHour=" + ratePerHour + '}';
+        return "HourlyEmployee{" + "empID=" + empID + ", Name=" + firstName + " " + middleIn + ". " + lastName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalHoursWorked=" + totalHoursWorked + ", ratePerHour=" + ratePerHour + '}';
     }
 }

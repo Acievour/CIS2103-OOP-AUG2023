@@ -6,22 +6,21 @@ public class BasePlusCommissionEmployee extends Employee{
     
     // Contructors
     public BasePlusCommissionEmployee() {
-        empID = 0;
-        empName = "XXXXX";
+        super.empID = 0;
         totalSales = 0;
         baseSalary = 0;
     }
     
-    public BasePlusCommissionEmployee(int empID, String empName) {
+    public BasePlusCommissionEmployee(int empID, String firstName, char middleIn, String lastName) {
+        super(firstName, middleIn, lastName);
         super.empID = empID;
-        super.empName = empName;
         totalSales = 0;
         baseSalary = 0;
     }
 
-    public BasePlusCommissionEmployee(int empID, String empName, MyDate empDateHired, MyDate empBirthDate, double totalSales, double baseSalary) {
+    public BasePlusCommissionEmployee(int empID, String firstName, char middleIn, String lastName, MyDate empDateHired, MyDate empBirthDate, double totalSales, double baseSalary) {
+        super(firstName, middleIn, lastName);
         super.empID = empID;
-        super.empName = empName;
         super.empDateHired = empDateHired;
         super.empBirthDate = empBirthDate;
         this.totalSales = totalSales;
@@ -47,7 +46,7 @@ public class BasePlusCommissionEmployee extends Employee{
     public void displayInfo() {
         System.out.println("--- Base Plus Commission Employee ---");
         System.out.println("ID: " + empID);
-        System.out.println("Name: " + empName);
+        System.out.println("Name: " + firstName + " " + middleIn + ". " + lastName);
         System.out.println("Date Hired: " + empDateHired);
         System.out.println("Date of Birth: " + empBirthDate);
         System.out.println("Total Sales: " + totalSales);
@@ -74,7 +73,6 @@ public class BasePlusCommissionEmployee extends Employee{
     
     @Override
     public String toString() {
-        return "BasePlusCommissionEmployee{" + "empID=" + empID + ", empName=" + empName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalSales=" + totalSales + ", baseSalary=" + baseSalary + '}';
+        return "BasePlusCommissionEmployee{" + "empID=" + empID + ", Name=" + firstName + " " + middleIn + ". " + lastName + ", empDateHired=" + empDateHired + ", empBirthDate=" + empBirthDate + ", totalSales=" + totalSales + ", baseSalary=" + baseSalary + '}';
     }
-    
 }
